@@ -95,7 +95,6 @@ sphere = shape3DFactory.getShape(1)
 print(sphere)
 sphere.build()
 
-
 touchFactory = ShapeTouchFactory()
 slide = ShapeTouchFactory.getShape(1)
 slide.touch()
