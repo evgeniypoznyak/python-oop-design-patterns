@@ -103,3 +103,5 @@ slide.build()
 panel = ShapeTouchFactory.getShape(2)
 panel.touch()
 panel.draw()
+
+#test
