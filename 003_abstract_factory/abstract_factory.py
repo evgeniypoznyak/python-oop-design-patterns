@@ -53,3 +53,20 @@ class Shape3DFactory(ShapeFactoryInterface):
         if sides == 6:
             return Cube()
         assert 0, 'Bad 3D shape creation: shape factory not defined for ' + sides + ' sides'
+
+
+shape2DFactory = Shape2DFactory()
+circle = shape2DFactory.getShape(1)
+print(circle)
+circle.draw()
+
+
+shape3DFactory = Shape3DFactory()
+sphere = shape3DFactory.getShape(1)
+print(sphere)
+sphere.build()
+
+
+
+
+
