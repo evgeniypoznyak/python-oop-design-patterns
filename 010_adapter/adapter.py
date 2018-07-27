@@ -35,7 +35,7 @@ class AmericanKettle:
     __power = None
 
     def __init__(self, power):
-        self.__power = power
+        self.__power = power  # SocketInterface
 
     def boil(self):
         if self.__power.voltage() > 110:
@@ -63,9 +63,11 @@ class Adapter(USASocketInterface):
         return self.__socket.neutral()
 
 
-outlet = AmericanKettle(EuropeanSocket())
+socket = EuropeanSocket()
+
+outlet = AmericanKettle(socket)
 outlet.boil()
 
-adapter = Adapter(EuropeanSocket())
+adapter = Adapter(socket)
 outlet = AmericanKettle(adapter)
 outlet.boil()
