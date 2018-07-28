@@ -1,4 +1,4 @@
-class Screen(object):
+class Screen:
     def __init__(self, text=''):
         self.text = text
         self.clip_board = ''
