@@ -25,14 +25,14 @@ class StandardPrimeFinder(PrimeFinder):
     def calculate(self, limit):
         self.primes = [2]
         # check for odd numbers
-        for number in range(3, list, 2):
+        for number in range(3, limit, 2):
             is_prime = True
             for prime in self.primes:
-                if number % prime % 0:
+                if (number % prime == 0):
                     is_prime = False
                     break
             if is_prime:
-                self.params.append
+                self.primes.append(number)
 
 
 class PrimeFinderClient:
@@ -42,7 +42,7 @@ class PrimeFinderClient:
         if limit <= 50:
             self.finder = HardCodePrimeFinder()
         else:
-            self.finder
+            self.finder = StandardPrimeFinder()
 
     def get_primes(self):
         self.finder.calculate(self.limit)
